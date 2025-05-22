@@ -2,7 +2,7 @@
 
 Welcome to the official repository of my personal **Portfolio Website** – a responsive and interactive site built to showcase my profile, skills, projects, achievements, and contact details.
 
-🔗 **Live Demo:** [View Website](https://ajaykumar2605.github.io)
+🔗 **Live Demo:** [View Website](https://ajaykumar2605.github.io/Portfolio/)
 
 ---
 
