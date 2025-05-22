@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/utility.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link id="siteicon" rel="icon" type="image/png" href="/assets/Hero/Ak_2.jpg">
+    <link id="thanksicon" rel="icon" type="image/png" href="/assets/Hero/thanks.png">
+    <title>Portfolio | AJAY KUMAR</title>
+</head>
+<body oncontextmenu="return false">
+
+
+<!-- navbar starts -->
+<header>
+       <a href="/" class="logo"><i class="fa-brands fa-redhat" style="color: #cb0707;"></i> AJAY KUMAR</a>
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+            <li><a class="active" href="#home"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="#about"><i class="fa-solid fa-user"></i> About</a></li>
+            <li><a href="#skills"><i class="fa-solid fa-cogs"></i> Skills</a></li>
+            <li><a href="#projects"><i class="fas fa-laptop-code"></i> Projects</a></li>
+            <li><a href="#achievements"><i class="fa-solid fa-trophy"></i> Achievements</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+            </ul>
+        </nav>
+</header>
+<!-- navbar ends -->
+
+
+<!-- hero section starts -->
+<section class="home" id="home">
+    <canvas id="nodes-bg-canvas"></canvas>
+    <div id="particles-js"></div>
+    <div class="content">
+    <h2>Hi Hello,<br/> I'm Ajay <span>Kumar</span></h2>
+    <p>i am also <span class="typing-text"></span></p>
+    <a href="#about" class="btn"><span>About Me</span>
+      <i class="fas fa-arrow-circle-down"></i>
+    </a>
+    <div class="socials">
+        <ul class="social-icons">
+          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/ajay-kumar-m-732196318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
+          <li><a class="github" aria-label="GitHub" href="https://github.com/Ajaykumar2605" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a class="mail" aria-label="Mail" href="mailto:mgajaykumar2004@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a></li>
+          <li><a class="youtube" aria-label="Youtube" href="https://www.youtube.com/@JustOneByte_24hr" target="_blank"><i class="fab fa-youtube"></i></a></li>
+          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/ajaykumar.m.26?utm_source=qr&igsh=OGRweDFtazB6NWY1" target="_blank"><i class="fab fa-instagram" target="_blank"></i></a></li>
+        </ul>
+      </div>
+    </div>
+<div class="image tilt-card">
+  <img draggable="false" class="tilt" src="./assets/Hero/Ak_2.jpg" alt="">
+</div>
+</section>
+<!-- hero section ends -->
+
+<!-- about section starts -->
+<section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+    <div class="row">
+    <div class="image tilt-card">
+        <img draggable="false" class="tilt" src="./assets/Hero/Ak_1.png" alt="">
+    </div>
+    <div class="content">
+        <h3>I'm AK</h3>
+        <span class="tag">Linux System Administrator</span>
+        <p>Hi, I'm Ak, a passionate Linux System Administrator currently working at Hewlett Packard Enterprise (HPE). 
+          I have a strong interest in Linux and open-source platforms, 
+          which drives my enthusiasm for learning and implementing powerful solutions.
+           I'm skilled in various Linux distributions, along with Python, Ansible, web development, and automation.
+            My work focuses on streamlining system operations and delivering efficient, scalable solutions 
+            through scripting and configuration management.
+             I'm always eager to explore new technologies and contribute to open-source communities.</p>
+        <div class="contactbtn">
+            <a href="#contact" target="_blank" class="btn"><span>Contact me</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+    </div>
+</section>
+<section>
+<!-- about section ends -->
+
+<!-- skills section starts --> 
+ <section class="skills-section" id="skills">
+    <div class="skills-heading">
+      <span class="skills-icon"><i class="fa-solid fa-cogs"></i></span>
+      <span class="skills-title-bold">My</span>
+      <span class="skills-title-colored">Skills</span>
+    </div>
+    <br>
+    <div class="skills-list">
+      <div class="skill-row">
+        <div class="skill">
+          <span class="skill-name">Linux OS</span>
+          <span class="skill-percent">95%</span>
+          <div class="skill-bar" data-percent="95">
+            <div class="bubbles"></div>
+            <svg class="liquid-bar" viewBox="0 0 100 16" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="waterGradientLinux" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2196f3"/>
+                  <stop offset="100%" stop-color="#6ec6ff"/>
+                </linearGradient>
+              </defs>
+              <path class="liquid" d="" fill="url(#waterGradientLinux)"/>
+            </svg>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">System Administration</span>
+          <span class="skill-percent">92%</span>
+          <div class="skill-bar" data-percent="92">
+            <div class="bubbles"></div>
+            <svg class="liquid-bar" viewBox="0 0 100 16" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="waterGradientSysAdmin" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2196f3"/>
+                  <stop offset="100%" stop-color="#6ec6ff"/>
+                </linearGradient>
+              </defs>
+              <path class="liquid" d="" fill="url(#waterGradientSysAdmin)"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill">
+          <span class="skill-name">Ansible</span>
+          <span class="skill-percent">85%</span>
+          <div class="skill-bar" data-percent="85">
+            <div class="bubbles"></div>
+            <svg class="liquid-bar" viewBox="0 0 100 16" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="waterGradientAnsible" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2196f3"/>
+                  <stop offset="100%" stop-color="#6ec6ff"/>
+                </linearGradient>
+              </defs>
+              <path class="liquid" d="" fill="url(#waterGradientAnsible)"/>
+            </svg>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Python</span>
+          <span class="skill-percent">80%</span>
+          <div class="skill-bar" data-percent="80">
+            <div class="bubbles"></div>
+            <svg class="liquid-bar" viewBox="0 0 100 16" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="waterGradientPython" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2196f3"/>
+                  <stop offset="100%" stop-color="#6ec6ff"/>
+                </linearGradient>
+              </defs>
+              <path class="liquid" d="" fill="url(#waterGradientPython)"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill">
+          <span class="skill-name">VirtualBox & VMware</span>
+          <span class="skill-percent">75%</span>
+          <div class="skill-bar" data-percent="75">
+            <div class="bubbles"></div>
+            <svg class="liquid-bar" viewBox="0 0 100 16" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="waterGradientVM" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2196f3"/>
+                  <stop offset="100%" stop-color="#6ec6ff"/>
+                </linearGradient>
+              </defs>
+              <path class="liquid" d="" fill="url(#waterGradientVM)"/>
+            </svg>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Visual Studio Code</span>
+          <span class="skill-percent">85%</span>
+          <div class="skill-bar" data-percent="85">
+            <div class="bubbles"></div>
+            <svg class="liquid-bar" viewBox="0 0 100 16" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="waterGradientVSCode" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2196f3"/>
+                  <stop offset="100%" stop-color="#6ec6ff"/>
+                </linearGradient>
+              </defs>
+              <path class="liquid" d="" fill="url(#waterGradientVSCode)"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill">
+          <span class="skill-name">Open Source Platforms</span>
+          <span class="skill-percent">80%</span>
+          <div class="skill-bar" data-percent="80">
+            <div class="bubbles"></div>
+            <svg class="liquid-bar" viewBox="0 0 100 16" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="waterGradientOpenSource" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2196f3"/>
+                  <stop offset="100%" stop-color="#6ec6ff"/>
+                </linearGradient>
+              </defs>
+              <path class="liquid" d="" fill="url(#waterGradientOpenSource)"/>
+            </svg>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Computer Hardware</span>
+          <span class="skill-percent">75%</span>
+          <div class="skill-bar" data-percent="75">
+            <div class="bubbles"></div>
+            <svg class="liquid-bar" viewBox="0 0 100 16" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="waterGradientHardware" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2196f3"/>
+                  <stop offset="100%" stop-color="#6ec6ff"/>
+                </linearGradient>
+              </defs>
+              <path class="liquid" d="" fill="url(#waterGradientHardware)"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="skill-row">
+        <div class="skill">
+          <span class="skill-name">Web Development</span>
+          <span class="skill-percent">70%</span>
+          <div class="skill-bar" data-percent="70">
+            <div class="bubbles"></div>
+            <svg class="liquid-bar" viewBox="0 0 100 16" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="waterGradientWeb" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2196f3"/>
+                  <stop offset="100%" stop-color="#6ec6ff"/>
+                </linearGradient>
+              </defs>
+              <path class="liquid" d="" fill="url(#waterGradientWeb)"/>
+            </svg>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">Git & GitHub</span>
+          <span class="skill-percent">80%</span>
+          <div class="skill-bar" data-percent="80">
+            <div class="bubbles"></div>
+            <svg class="liquid-bar" viewBox="0 0 100 16" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="waterGradientGit" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2196f3"/>
+                  <stop offset="100%" stop-color="#6ec6ff"/>
+                </linearGradient>
+              </defs>
+              <path class="liquid" d="" fill="url(#waterGradientGit)"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Technology Slider Start -->
+    <div class="tech-slider-container">
+  <div class="tech-slider" id="techSlider">
+    <!-- RedHat (custom SVG recommended, using fa-redhat if available) -->
+    <i class="fab fa-redhat" title="RedHat" style="color:#e00;"></i>
+    <!-- CentOS (custom SVG recommended, using fa-linux as fallback) -->
+    <i class="fab fa-linux" title="CentOS" style="color:#932279;"></i>
+    <!-- Windows -->
+    <i class="fab fa-windows" title="Windows" style="color:#00adef;"></i>
+    <!-- Ubuntu -->
+    <i class="fab fa-ubuntu" title="Ubuntu" style="color:#e95420;"></i>
+    <!-- Fedora -->
+    <i class="fab fa-fedora" title="Fedora" style="color:#294172;"></i>
+    <!-- WordPress -->
+    <i class="fab fa-wordpress" title="WordPress" style="color:#21759b;"></i>
+    <!-- PHP -->
+    <i class="fab fa-php" title="PHP" style="color:#777bb4;"></i>
+    <!-- HTML5 -->
+    <i class="fab fa-html5" title="HTML5" style="color:#e44d26;"></i>
+    <!-- CSS3 -->
+    <i class="fab fa-css3-alt" title="CSS3" style="color:#1572b6;"></i>
+    <!-- JavaScript -->
+    <i class="fab fa-js-square" title="JavaScript" style="color:#f7df1e;"></i>
+    <!-- PyCharm (custom SVG recommended, using fa-python as fallback) -->
+    <i class="fab fa-python" title="PyCharm" style="color:#21d789;"></i>
+    <!-- Git Bash (using fa-terminal as closest match) -->
+    <i class="fas fa-terminal" title="Git Bash" style="color:#4eaa25;"></i>
+    <!-- Git -->
+    <i class="fab fa-git-alt" title="Git" style="color:#f1502f;"></i>
+    <!-- Repeat for seamless loop -->
+    <i class="fab fa-redhat" title="RedHat" style="color:#e00;"></i>
+    <i class="fab fa-linux" title="CentOS" style="color:#932279;"></i>
+    <i class="fab fa-windows" title="Windows" style="color:#00adef;"></i>
+    <i class="fab fa-ubuntu" title="Ubuntu" style="color:#e95420;"></i>
+    <i class="fab fa-fedora" title="Fedora" style="color:#294172;"></i>
+    <i class="fab fa-wordpress" title="WordPress" style="color:#21759b;"></i>
+    <i class="fab fa-php" title="PHP" style="color:#777bb4;"></i>
+    <i class="fab fa-html5" title="HTML5" style="color:#e44d26;"></i>
+    <i class="fab fa-css3-alt" title="CSS3" style="color:#1572b6;"></i>
+    <i class="fab fa-js-square" title="JavaScript" style="color:#f7df1e;"></i>
+    <i class="fab fa-python" title="PyCharm" style="color:#21d789;"></i>
+    <i class="fas fa-terminal" title="Git Bash" style="color:#4eaa25;"></i>
+    <i class="fab fa-git-alt" title="Git" style="color:#f1502f;"></i>
+  </div>
+</div>
+</section>
+<!-- skills section ends -->
+
+<!-- project section starts -->
+<section class="work" id="projects">
+  <video class="video-bg" autoplay muted loop playsinline>
+    <source src="./assets/projects/project_bg.mp4" type="video/mp4">
+    <!-- fallback text -->
+    Your browser does not support the video tag.
+  </video>
+  <h2 class="projects-heading">
+    <i class="fas fa-laptop-code"></i> Projects <span>Made</span>
+  </h2>
+  <div class="projects-container">
+    <!-- Top 3 cards -->
+    <div class="project-card card-3d">
+      <div class="project-image-container">
+        <img src="./assets/projects/batteryinfo.png" alt="Battery Info" class="project-image" />
+        <div class="project-title-bar">
+          <i class="fas fa-battery-full"></i>
+          Battery <span>Info</span>
+        </div>
+      </div>
+      <div class="project-cover">
+        <div class="project-desc">A Python app that provides a graphical interface to monitor battery metrics like percentage, charging status, and estimated time remaining.</div>
+        <div class="btn-group">
+          <a href="https://github.com/Ajaykumar2605/Battery-health" target="_blank" class="btn view-btn"><i class="fas fa-eye"></i> View More</a>
+          <!--<a href="https://github.com/Ajaykumar2605/Battery-health" class="btn try-btn"><i class="fas fa-play"></i> Try Now</a>-->
+        </div>
+      </div>
+    </div>
+    <div class="project-card card-3d">
+      <div class="project-image-container">
+        <img src="./assets/projects/student.png" alt="Student Management System" class="project-image" />
+        <div class="project-title-bar">
+          <i class="fas fa-user-graduate"></i>
+          Student <span>Metrics</span>
+        </div>
+      </div>
+      <div class="project-cover">
+        <div class="project-desc">Student Metrics is a Tkinter-based desktop app that lets users input and save student details into an Excel file.</div>
+        <div class="btn-group">
+          <a href="https://gitfront.io/r/AjayKumar/jf4xNEMRuGsn/Student-Metrics/" target="_blank" class="btn view-btn"><i class="fas fa-eye"></i> View More</a>
+          <a href="https://github.com/Ajaykumar2605/Student-Metrics" target="_blank" class="btn try-btn"><i class="fas fa-play"></i> Try Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="project-card card-3d">
+      <div class="project-image-container">
+        <img src="./assets/projects/text-to-speech.png" alt="Text to Speech" class="project-image" />
+        <div class="project-title-bar">
+          <i class="fas fa-volume-up"></i>
+          Text to<span>Speech</span>
+        </div>
+      </div>
+      <div class="project-cover">
+        <div class="project-desc">Convert written text to natural-sounding speech effortlessly with the Python-based Text to Speech application</div>
+        <div class="btn-group">
+          <a href="https://gitfront.io/r/AjayKumar/zBKTPAoBA2fN/text-to-speech/" target="_blank" class="btn view-btn"><i class="fas fa-eye"></i> View More</a>
+          <a href="https://github.com/Ajaykumar2605/text-to-speech" target="_blank" class="btn try-btn"><i class="fas fa-play"></i> Try Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- Bottom 3 cards -->
+    <div class="project-card card-3d">
+      <div class="project-image-container">
+        <img src="./assets/projects/microagri.png" alt="agriculture" class="project-image" />
+        <div class="project-title-bar">
+          <i class="fas fa-seedling"></i>
+        AquaGrow <span>Grow</span>
+        </div>
+      </div>
+      <div class="project-cover">
+        <div class="project-desc">System for efficient monitoring and management of crop health and environmental conditions.</div>
+        <div class="btn-group">
+          <a href="https://github.com/Ajaykumar2605/AquaGrow" target="_blank" class="btn view-btn"><i class="fas fa-eye"></i> View More</a>
+          <!--<a href="#" class="btn try-btn"><i class="fas fa-play"></i> Try Now</a> -->
+        </div>
+      </div>
+    </div>
+    <div class="project-card card-3d">
+      <div class="project-image-container">
+        <img src="./assets/projects/banking.png" alt="Website" class="project-image" />
+        <div class="project-title-bar">
+          <i class="fas fa-university"></i>
+         Apex<span>Bank</span>
+        </div>
+      </div>
+      <div class="project-cover">
+        <div class="project-desc">This site presents a fictional bank, highlighting responsive design and modern web technologies.</div>
+        <div class="btn-group">
+          <a href="https://github.com/Ajaykumar2605/Apex-Bank" target="_blank" class="btn view-btn"><i class="fas fa-eye"></i> View More</a>
+          <a href="https://apex-bank.free.nf/home.php" target="_blank" class="btn try-btn"><i class="fas fa-play"></i> Try Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="project-card card-3d">
+      <div class="project-image-container">
+        <img src="./assets/projects/car-parking.png" alt="Website" class="project-image" />
+        <div class="project-title-bar">
+          <i class="fas fa-parking"></i>
+          Park<span>Smart</span>
+        </div>
+      </div>
+      <div class="project-cover">
+        <div class="project-desc">Security features for efficient and secure parking management.</div>
+        <div class="btn-group">
+          <a href="https://github.com/Ajaykumar2605/ParkSmart" target="_blank" class="btn view-btn"><i class="fas fa-eye"></i> View More</a>
+          <!--<a href="#" class="btn try-btn"><i class="fas fa-play"></i> Try Now</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="get-more-btn">
+ <button class="btn" id="magicGetMore" onclick="window.open('https://github.com/Ajaykumar2605', '_blank')">
+  <i class="fas fa-arrow-down"></i> Get More
+</button>
+<div class="magic-stars" id="magicStars"></div>
+</div>
+</section>
+<!-- project section ends -->
+
+<!-- achievements section starts -->
+<section class="achievements" id="achievements">
+  <div class="achievements-info"></div>
+  <h2 class="achievements-title">
+    <i class="fa-solid fa-trophy"></i> Achievements <span>& Awards</span>
+  </h2>
+  <div class="tabs">
+    <input type="radio" id="tab-upcoming" name="tab" checked>
+    <label class="tab" for="tab-upcoming">
+      <i class="fas fa-shield-alt" style="color:#1f776a; margin-right:6px;"></i> Badges
+    </label>
+    <input type="radio" id="tab-development" name="tab">
+    <label class="tab" for="tab-development">
+      <i class="fas fa-award" style="color:#ffbc05; margin-right:6px;"></i> Certificates
+    </label>
+    <input type="radio" id="tab-completed" name="tab">
+    <label class="tab" for="tab-completed">
+      <i class="fas fa-tools" style="color:#045d6f; margin-right:6px;"></i> Tools
+    </label>
+    <div class="glider">
+      <svg class="glider-svg" viewBox="0 0 200 54" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="liquidBarGradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#2196f3"/>
+            <stop offset="100%" stop-color="#6ec6ff"/>
+          </linearGradient>
+        </defs>
+        <path class="liquid-bar-path" d="" fill="url(#liquidBarGradient)"/>
+      </svg>
+    </div>
+  </div>
+  <div class="tab-gallery tab-gallery-upcoming art-gallery">
+        <div class="art-card tilt-card"><img src="/assets/Achievements/Badge/RHCSA.png" alt="Badge 1"></div>
+        <div class="art-card tilt-card"><img src="/assets/Achievements/Badge/RHCE.png" alt="Badge 2"></div>
+        <div class="art-card tilt-card"><img src="/assets/Achievements/Badge/networkbasic.png" alt="Badge 3"></div>
+        <div class="art-card tilt-card"><img src="/assets/Achievements/Badge/I2CS__1_.png" alt="Badge 4"></div>
+        <div class="art-card tilt-card"><img src="/assets/Achievements/Badge/Intro2IoT.png" alt="Badge 5"></div>
+        <div class="art-card tilt-card"><img src="/assets/Achievements/Badge/Computer hardware.png" alt="Badge 6"></div>
+        <div class="art-card tilt-card"><img src="/assets/Achievements/Badge/RHCSA_Rapid_Track_Course.png" alt="Badge 7"></div>
+        <div class="art-card tilt-card"><img src="/assets/Achievements/Badge/Red_Hat_Enterprise_Linux_Automation_with_Ansible.png" alt="Badge 8"></div>
+    </div>
+    <div class="tab-gallery tab-gallery-development art-gallery">
+     <div class="art-card tilt-card"><img src="assets/Achievements/Certificate/RHCSA-1.png" alt="Certificate 1"></div>
+     <div class="art-card tilt-card"><img src="assets/Achievements/Certificate/RHCE-1.png" alt="Certificate 2"></div>
+     <div class="art-card tilt-card"><img src="assets/Achievements/Certificate/I2CS-1.png" alt="Certificate 3"></div>
+      <div class="art-card tilt-card"><img src="assets/Achievements/Certificate/IntrotoIoT-1.png" alt="Certificate 4"></div>
+      <div class="art-card tilt-card"><img src="assets/Achievements/Certificate/Data analyst with python IBM Certificate _ Cognitive Class-1.png" alt="Certificate 5"></div>
+      <div class="art-card tilt-card"><img src="assets/Achievements/Certificate/ComputerHardwareBasics-1.png" alt="Certificate 6"></div>
+      <div class="art-card tilt-card"><img src="assets/Achievements/Certificate/Microsoft Excel (coursera)-1.png" alt="Certificate 7"></div>
+      <div class="art-card tilt-card"><img src="assets/Achievements/Certificate/NetworkingBasics-1.png" alt="Certificate 8"></div>
+    </div>
+    <div class="tab-gallery tab-gallery-completed art-gallery">
+     <div class="art-card tilt-card"><img src="assets/Achievements/Tools/ansible.svg" alt="Tool 1"></div>
+     <div class="art-card tilt-card"><img src="assets/Achievements/Tools/arduino.svg" alt="Tool 2"></div>
+      <div class="art-card tilt-card"><img src="assets/Achievements/Tools/bootstrap.svg" alt="Tool 3"></div>
+      <div class="art-card tilt-card"><img src="assets/Achievements/Tools/css.svg" alt="Tool 4"></div>
+      <div class="art-card tilt-card"><img src="assets/Achievements/Tools/redhat.svg" alt="Tool 5"></div>
+      <div class="art-card tilt-card"><img src="assets/Achievements/Tools/git.svg" alt="Tool 6"></div>
+      <div class="art-card tilt-card"><img src="assets/Achievements/Tools/github.svg" alt="Tool 7"></div>
+      <div class="art-card tilt-card"><img src="assets/Achievements/Tools/grafana.svg" alt="Tool 8"></div>
+      <div class="art-card tilt-card"><img src="assets/Achievements/Tools/html-5.svg" alt="Tool 9"></div>
+      <div class="art-card tilt-card"><img src="assets/Achievements/Tools/python.svg" alt="Tool 10"></div>
+      <div class="art-card tilt-card"><img src="assets/Achievements/Tools/windows.svg" alt="Tool 11"></div>
+      <div class="art-card tilt-card"><img src="assets/Achievements/Tools/wordpress.svg" alt="Tool 12"></div>
+      <div class="art-card tilt-card"><img src="assets/Achievements/Tools/pycharm.svg" alt="Tool 13"></div>
+      <div class="art-card tilt-card"><img src="assets/Achievements/Tools/vs-code.svg" alt="Tool 14"></div>
+      <div class="art-card tilt-card"><img src="assets/Achievements/Tools/vmware.svg" alt="Tool 15"></div>
+      <div class="art-card tilt-card"><img src="assets/Achievements/Tools/xampp.svg" alt="Tool 16"></div>
+    </div>
+</section>
+<!-- achievements section ends -->
+
+<!--contact section -->
+<section class="contact-section" id="contact">
+  <canvas class="contact-bg-canvas"></canvas>
+  <div class="contact-info-container">
+    <h2 class="contact-title">
+  <i class="fas fa-envelope contact-title-icon"></i> Contact <span>Me</span>
+</h2>
+    <p class="contact-subtitle">Below are the details to reach out to me!</p>
+    <div class="contact-cards">
+  <!-- project Card -->
+ <!-- LinkedIn Card -->
+<div class="contact-card card-3d">
+  <div class="liquid-bg">
+    <svg class="contact-liquid-bg" viewBox="0 0 150 180" width="100%" height="100%" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="liquidContactLinkedin" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#0077b5"/>
+          <stop offset="100%" stop-color="#00c6ff"/>
+        </linearGradient>
+      </defs>
+      <path class="liquid-contact-path" d="" fill="url(#liquidContactLinkedin)"/>
+      <g class="liquid-bubbles"></g>
+    </svg>
+  </div>
+  <a href="https://www.linkedin.com/in/ajay-kumar-m-732196318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="contact-icon-link" tabindex="0" aria-label="LinkedIn" target="_blank">
+    <div class="contact-icon" style="color:#0077b5;">
+      <i class="fab fa-linkedin"></i>
+    </div>
+  </a>
+  <div class="contact-label">LINKEDIN</div>
+</div>
+<!-- Instagram Card -->
+<div class="contact-card card-3d">
+  <div class="liquid-bg">
+    <svg class="contact-liquid-bg" viewBox="0 0 150 180" width="100%" height="100%" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="liquidContactInsta" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#fd5d47"/>
+          <stop offset="100%" stop-color="#fcb045"/>
+        </linearGradient>
+      </defs>
+      <path class="liquid-contact-path" d="" fill="url(#liquidContactInsta)"/>
+      <g class="liquid-bubbles"></g>
+    </svg>
+  </div>
+  <a href="https://www.instagram.com/ajaykumar.m.26?utm_source=qr&igsh=OGRweDFtazB6NWY1" target="_blank" class="contact-icon-link" tabindex="0" aria-label="Instagram" target="_blank">
+    <div class="contact-icon" style="color:#e4405f;">
+      <i class="fab fa-instagram"></i>
+    </div>
+  </a>
+  <div class="contact-label">INSTAGRAM</div>
+</div>
+<!-- Email Card -->
+<div class="contact-card card-3d">
+  <div class="liquid-bg">
+    <svg class="contact-liquid-bg" viewBox="0 0 150 180" width="100%" height="100%" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="liquidContact3" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#fbc02d"/>
+          <stop offset="100%" stop-color="#ffe082"/>
+        </linearGradient>
+      </defs>
+      <path class="liquid-contact-path" d="" fill="url(#liquidContact3)"/>
+      <g class="liquid-bubbles"></g>
+    </svg>
+  </div>
+  <a href="mailto:mgajaykumar2004@gmail.com" target="_blank" class="contact-icon-link" tabindex="0" aria-label="Send Email">
+    <div class="contact-icon" style="color:#fbc02d;">
+      <i class="fas fa-envelope"></i>
+    </div>
+  </a>
+  <div class="contact-label">EMAIL ID</div>
+</div>
+<!-- Resume Card -->
+<div class="contact-card card-3d">
+  <div class="liquid-bg">
+    <svg class="contact-liquid-bg" viewBox="0 0 150 180" width="100%" height="100%" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="liquidContact4" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#43a047"/>
+          <stop offset="100%" stop-color="#b2ff59"/>
+        </linearGradient>
+      </defs>
+      <path class="liquid-contact-path" d="" fill="url(#liquidContact4)"/>
+      <g class="liquid-bubbles"></g>
+    </svg>
+  </div>
+  <a href="https://drive.google.com/file/d/1WwrC1FGyTFSI7C3E2cetsIF0JEGuB1eJ/view?usp=drive_link" target="_blank" class="contact-icon-link" tabindex="0" aria-label="Download Resume">
+    <div class="contact-icon" style="color:#43a047;">
+      <i class="fas fa-file-alt"></i>
+    </div>
+  </a>
+  <div class="contact-label">MY RESUME</div>
+</div>
+</div>
+
+    <div class="contact-question-row">
+      <span class="contact-question">Have a Question?</span>
+      <a href="mailto:mgajaykumar2004@gmail.com" target="_blank" class="contact-btn">CLICK HERE</a>
+    </div>
+    <div class="contact-social-row">
+      <span class="contact-findme">Find me on</span>
+      <a href="https://www.youtube.com/@JustOneByte_24hr" class="contact-social" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.linkedin.com/in/ajay-kumar-m-732196318?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="contact-social" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Ajaykumar2605" class="contact-social" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="mailto:mgajaykumar2004@gmail.com" target="_blank" class="contact-social"><i class="fa-regular fa-envelope"></i></a>
+      <a href="https://www.instagram.com/ajaykumar.m.26?utm_source=qr&igsh=OGRweDFtazB6NWY1" class="contact-social" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</section>
+<!-- contact section ends -->
+  
+<!-- Footer Start -->
+<footer class="footer">
+      <div class="footer-container">
+        <div class="footer-content">
+          <span>&copy; 2025 AJAY KUMAR. All Rights Reserved.</span>
+          <span>Designed by </span><span style="background: linear-gradient(90deg, #027ea3 0%, #a17a05 50%, #8c04a3 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; font-weight: bold;">Mr. AK</span>
+          <span>Powered by
+  <i class="fab fa-github" style="color:#181717; vertical-align:middle;"></i>
+   GitHub &amp;
+  <i class="fas fa-robot" style="color:#005ec9; vertical-align:middle;"></i>
+   Copilot</span>
+        </div>
+      </div>
+</footer>
+<!-- Footer End -->
+
+
+<!--script-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- vanilla tilt.js links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- scroll reveal anim -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<!-- typed.js cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./js/script.js"></script>
+
+<a href="#home" id="scroll-top" class="up-btn" aria-label="Back to top">
+  <span class="up-arrow">
+    <i class="fas fa-arrow-up"></i>
+  </span>
+</a>
+</body>
+</html>
