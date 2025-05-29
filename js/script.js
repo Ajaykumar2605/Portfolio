@@ -148,12 +148,12 @@ $(document).ready(function () {
         var thanksicon = document.getElementById("thanksicon");
         if (document.visibilityState === "visible") {
             document.title = "AJAY KUMAR | Portfolio";
-            if (siteicon) siteicon.setAttribute("href", "./assets/Hero/Ak_2.jpg");
-            if (thanksicon) thanksicon.setAttribute("href", "./assets/Hero/thanks.png");
+            if (siteicon) siteicon.setAttribute("href", "/assets/Hero/Ak_2.jpg");
+            if (thanksicon) thanksicon.setAttribute("href", "/assets/Hero/thanks.png");
         } else {
             document.title = "Thanks for visit";
-            if (siteicon) siteicon.setAttribute("href", "./assets/Hero/Ak_2.jpg");
-            if (thanksicon) thanksicon.setAttribute("href", "./assets/Hero/thanks.png");
+            if (siteicon) siteicon.setAttribute("href", "/assets/Hero/Ak_2.jpg");
+            if (thanksicon) thanksicon.setAttribute("href", "/assets/Hero/thanks.png");
         }
     });
 
