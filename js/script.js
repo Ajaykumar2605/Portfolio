@@ -147,10 +147,10 @@ $(document).ready(function () {
       var favicon = document.querySelector('link[rel="icon"]');
       if (document.visibilityState === "visible") {
         document.title = "Portfolio | AJAY KUMAR";
-        if (favicon) favicon.setAttribute("href", "/assets/Hero/Ak_2.jpg");
+        if (favicon) favicon.setAttribute("href", "./assets/Hero/Ak_2.jpg");
       } else {
         document.title = "Thanks for visit";
-        if (favicon) favicon.setAttribute("href", "/assets/Hero/thanks.png");
+        if (favicon) favicon.setAttribute("href", "./assets/Hero/thanks.png");
       }
     });
 
