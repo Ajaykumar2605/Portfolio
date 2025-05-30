@@ -144,17 +144,14 @@ $(document).ready(function () {
 
     // Favicon and title change on visibility
     document.addEventListener('visibilitychange', function () {
-        var siteicon = document.getElementById("siteicon");
-        var thanksicon = document.getElementById("thanksicon");
-        if (document.visibilityState === "visible") {
-            document.title = "AJAY KUMAR | Portfolio";
-            if (siteicon) siteicon.setAttribute("href", "/assets/Hero/Ak_2.jpg");
-            if (thanksicon) thanksicon.setAttribute("href", "/assets/Hero/thanks.png");
-        } else {
-            document.title = "Thanks for visit";
-            if (siteicon) siteicon.setAttribute("href", "/assets/Hero/Ak_2.jpg");
-            if (thanksicon) thanksicon.setAttribute("href", "/assets/Hero/thanks.png");
-        }
+      var favicon = document.querySelector('link[rel="icon"]');
+      if (document.visibilityState === "visible") {
+        document.title = "Portfolio | AJAY KUMAR";
+        if (favicon) favicon.setAttribute("href", "/assets/Hero/Ak_2.jpg");
+      } else {
+        document.title = "Thanks for visit";
+        if (favicon) favicon.setAttribute("href", "/assets/Hero/thanks.png");
+      }
     });
 
     // Art gallery tabs
