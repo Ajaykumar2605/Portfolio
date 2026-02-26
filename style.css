@@ -1,0 +1,159 @@
+/* Custom Styles extending Tailwind */
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Animations and Transitions */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card hover animation for skills */
+.scale-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scale-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.dark .scale-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Base custom utilities */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Offset for sticky navbar */
+}
+
+/* Active Nav Links */
+.nav-link.active {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.dark .nav-link.active {
+  color: #60a5fa;
+}
+
+
+/* ==============================
+   CONTACT SECTION (Optimized)
+================================= */
+
+.contact-section {
+  position: relative;
+  padding: 5rem 1rem;
+}
+
+.contact-info-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Title */
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.contact-title span {
+  color: #1a65dc; /* Tailwind brand blue */
+}
+
+.contact-subtitle {
+  margin-bottom: 3rem;
+  color: #64748b;
+}
+
+.dark .contact-subtitle {
+  color: #94a3b8;
+}
+
+/* Cards Layout (Auto Responsive Grid) */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22px, 1fr));
+  gap: 2rem;
+}
+
+/* Card */
+.contact-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem 1.25rem;   /* reduced padding */
+  min-height: 160px;         /* controlled height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;   /* center content */
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.dark .contact-card {
+  background: #0f172a;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon */
+.contact-icon {
+  font-size: 2.0rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Label */
+.contact-label {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Links */
+.contact-icon-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}

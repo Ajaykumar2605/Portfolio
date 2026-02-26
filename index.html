@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/LOGO.png">
+    <title>AJAY'S Portfolio</title>
+    <meta name="description" content="Professional portfolio of a Cloud & Infrastructure Engineer specializing in AWS, Linux, Networking, and DevOps automation.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                            950: '#172554',
+                        }
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300 font-sans antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-white/70 dark:bg-slate-950/70 border-b border-slate-200/50 dark:border-slate-800/50" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 font-heading font-bold text-2xl tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-indigo-600">
+                    <a href="#home">AK Portfolio</P></a>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="nav-link hover:text-brand-600 dark:hover:text-brand-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                        <a href="#skills" class="nav-link hover:text-brand-600 dark:hover:text-brand-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Skills</a>
+                        <a href="#projects" class="nav-link hover:text-brand-600 dark:hover:text-brand-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Projects</a>
+                        <a href="#certifications" class="nav-link hover:text-brand-600 dark:hover:text-brand-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Certifications</a>
+                        <a href="#contact" class="nav-link hover:text-brand-600 dark:hover:text-brand-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+                        
+                        <button id="theme-toggle" type="button" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus:ring-4 focus:ring-slate-200 dark:focus:ring-slate-700 rounded-lg text-sm p-2.5 transition-colors">
+                            <i id="theme-toggle-dark-icon" class="fa-solid fa-moon hidden text-lg"></i>
+                            <i id="theme-toggle-light-icon" class="fa-solid fa-sun hidden text-lg"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden items-center gap-4">
+                    <button id="theme-toggle-mobile" type="button" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg text-sm p-2 transition-colors">
+                        <i id="theme-toggle-dark-icon-mobile" class="fa-solid fa-moon hidden text-lg"></i>
+                        <i id="theme-toggle-light-icon-mobile" class="fa-solid fa-sun hidden text-lg"></i>
+                    </button>
+                    <button id="mobile-menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none transition-colors" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-50 dark:hover:bg-slate-800 mobile-link">About</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-50 dark:hover:bg-slate-800 mobile-link">Skills</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-50 dark:hover:bg-slate-800 mobile-link">Projects</a>
+                <a href="#certifications" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-50 dark:hover:bg-slate-800 mobile-link">Certifications</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-slate-50 dark:hover:bg-slate-800 mobile-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background decorative blobs -->
+        <div class="absolute top-0 -left-4 w-72 h-72 bg-brand-400 rounded-full mix-blend-multiply filter blur-2xl opacity-30 dark:opacity-20 animate-blob"></div>
+        <div class="absolute top-0 -right-4 w-72 h-72 bg-indigo-400 rounded-full mix-blend-multiply filter blur-2xl opacity-30 dark:opacity-20 animate-blob animation-delay-2000"></div>
+        <div class="absolute -bottom-8 left-20 w-72 h-72 bg-emerald-400 rounded-full mix-blend-multiply filter blur-2xl opacity-30 dark:opacity-20 animate-blob animation-delay-4000"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="text-center max-w-4xl mx-auto reveal">
+                <p class="text-brand-600 dark:text-brand-400 font-semibold tracking-wide uppercase mb-4 text-sm md:text-base">Hello, I am</p>
+                <h1 class="text-5xl md:text-7xl font-heading font-extrabold tracking-tight mb-6">
+                    <span class="block text-slate-900 dark:text-white mb-2">AJAY KUMAR</span>
+                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-indigo-500 dark:from-brand-400 dark:to-indigo-400">
+                        Cloud & Infrastructure Engineer
+                    </span>
+                </h1>
+                <p class="mt-4 text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-10 mx-auto max-w-2xl leading-relaxed">
+                    Architecting scalable, highly available, and secure cloud environments. Architecting the future with an automation-first mindset.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#projects" class="w-full sm:w-auto px-8 py-3.5 border border-transparent text-base font-medium rounded-lg text-white bg-brand-600 hover:bg-brand-700 dark:bg-brand-500 dark:hover:bg-brand-600 md:text-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+                        View Projects
+                    </a>
+                    <a href="https://drive.google.com/file/d/1-lWb0_sVPnrLPB1D1gVrHIpF3FtRFu7i/view?usp=drive_link"  target="_blank"  class="w-full sm:w-auto px-8 py-3.5 border-2 border-slate-300 dark:border-slate-700 text-base font-medium rounded-lg text-slate-700 dark:text-slate-300 bg-transparent hover:bg-slate-50 dark:hover:bg-slate-800 md:text-lg transition-all transform hover:-translate-y-1">
+                        <i class="fa-solid fa-download mr-2"></i> Download Resume
+                    </a>
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 border-2 border-transparent text-base font-medium rounded-lg text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/30 hover:bg-brand-100 dark:hover:bg-brand-900/50 md:text-lg transition-all transform hover:-translate-y-1">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Scroll down indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+            <span class="text-slate-400 text-sm mb-2">Scroll</span>
+            <i class="fa-solid fa-arrow-down text-slate-400"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white dark:bg-slate-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">About Me</h2>
+                <div class="w-20 h-1.5 bg-brand-500 mx-auto rounded-full"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal">
+             <!-- Image Section -->
+                <div class="relative flex justify-center group reveal">
+             <!-- Main Image Card -->
+             <div class="aspect-square w-full max-w-md rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 transition-all duration-500
+                group-hover:shadow-2xl 
+                group-hover:border-brand-500
+                group-hover:scale-105">
+            <img src="/assets/hero.jpg" alt="Profile Image" class="w-10/5 h-10/5 object-contain transition-transform duration-700 group-hover:scale-110">
+        </div>
+        </div>
+        <div>
+   <div>
+    <h3 class="text-2xl font-heading font-bold mb-6 text-slate-800 dark:text-slate-200">
+    </h3>
+    <div class="space-y-4 text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+        <p>
+            I am a <strong>Cloud & Infrastructure Engineer</strong> with a strong foundation in Linux systems, AWS cloud technologies, networking, and automation. I am passionate about building secure, scalable, and resilient infrastructure that supports modern business operations.
+        </p>
+        <p>
+            I design, deploy, and manage highly available environments across on-premises and cloud platforms. From Linux server administration and storage management to AWS provisioning, virtualization, containerization, and CI/CD support, I ensure systems are reliable, optimized, and production-ready.
+        </p>
+        <p>
+            I bring hands-on expertise in <strong>RHEL-based systems, LVM, infrastructure services, AWS core services, Docker, KVM, Proxmox, Shell scripting, and Ansible</strong>, along with strong knowledge of security hardening, performance tuning, and automation practices.
+        </p>
+    </div>
+</div>   
+                    <div class="mt-8 grid grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-brand-500"></i>
+                            <span class="text-slate-700 dark:text-slate-300 font-medium">Collaborative Engineer</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-brand-500"></i>
+                            <span class="text-slate-700 dark:text-slate-300 font-medium">Problem Solver</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-brand-500"></i>
+                            <span class="text-slate-700 dark:text-slate-300 font-medium">Continuous Learner</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-brand-500"></i>
+                            <span class="text-slate-700 dark:text-slate-300 font-medium">Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Technical Skills Section -->
+    <section id="skills" class="py-24 bg-slate-50 dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">Technical Expertise</h2>
+                <div class="w-20 h-1.5 bg-brand-500 mx-auto rounded-full"></div>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">A comprehensive toolkit spanning cloud architecture, systems administration, and modern DevOps practices.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Cloud -->
+                <div class="bg-white dark:bg-slate-900 rounded-xl p-8 shadow-lg border border-slate-100 dark:border-slate-800 hover:border-brand-500 dark:hover:border-brand-500 transition-all group reveal scale-card">
+                    <div class="w-14 h-14 bg-brand-50 dark:bg-brand-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-aws text-2xl text-brand-600 dark:text-brand-400"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-4">Cloud Computing</h3>
+                    <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+                        <li><i class="fa-solid fa-caret-right text-brand-500 mr-2"></i><strong>AWS:</strong> EC2, S3, VPC, IAM</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-500 mr-2"></i>ELB, Auto Scaling</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-500 mr-2"></i>Route 53, CloudFront</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-500 mr-2"></i>CloudWatch, LoadBalancer</li>
+                    </ul>
+                </div>
+
+                <!-- Operating Systems -->
+                <div class="bg-white dark:bg-slate-900 rounded-xl p-8 shadow-lg border border-slate-100 dark:border-slate-800 hover:border-brand-500 dark:hover:border-brand-500 transition-all group reveal scale-card delay-100">
+                    <div class="w-14 h-14 bg-brand-50 dark:bg-brand-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-linux text-2xl text-brand-600 dark:text-brand-400"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-4">Operating Systems</h3>
+                    <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+                        <li><i class="fa-brands fa-redhat text-brand-500 mr-2"></i>RHEL / Rocky Linux</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-500 mr-2"></i>CentOS</li>
+                        <li><i class="fa-brands fa-ubuntu text-brand-500 mr-2"></i>Proxmox / Debian</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-500 mr-2"></i>Fedora Server</li>
+                    </ul>
+                </div>
+
+                <!-- Networking -->
+                <div class="bg-white dark:bg-slate-900 rounded-xl p-8 shadow-lg border border-slate-100 dark:border-slate-800 hover:border-brand-500 dark:hover:border-brand-500 transition-all group reveal scale-card delay-200">
+                    <div class="w-14 h-14 bg-brand-50 dark:bg-brand-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-network-wired text-2xl text-brand-600 dark:text-brand-400"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-4">Networking</h3>
+                    <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+                        <li><i class="fa-solid fa-caret-right text-brand-500 mr-2"></i>OSI/TCP Modules</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-500 mr-2"></i>TCP/IP, Routing, Switching</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-500 mr-2"></i>DNS, DHCP, NFS, FTP</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-500 mr-2"></i>Firewalls, Security Groups</li>
+                    </ul>
+                </div>
+
+                <!-- Automation -->
+                <div class="bg-white dark:bg-slate-900 rounded-xl p-8 shadow-lg border border-slate-100 dark:border-slate-800 hover:border-brand-500 dark:hover:border-brand-500 transition-all group reveal scale-card">
+                    <div class="w-14 h-14 bg-brand-50 dark:bg-brand-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-robot text-2xl text-brand-600 dark:text-brand-400"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-4">Automation & IAC</h3>
+                    <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+                        <li><i class="fa-solid fa-caret-right text-brand-500 mr-2"></i>Ansible</li>
+                        <li><i class="fa-solid fa-terminal text-brand-500 mr-2"></i>Bash / Shell Scripting</li>
+                        <li><i class="fa-brands fa-python text-brand-500 mr-2"></i>Python Automation</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-500 mr-2"></i>Cron Jobs, Systemd</li>
+                    </ul>
+                </div>
+
+                <!-- Containers -->
+                <div class="bg-white dark:bg-slate-900 rounded-xl p-8 shadow-lg border border-slate-100 dark:border-slate-800 hover:border-brand-500 dark:hover:border-brand-500 transition-all group reveal scale-card delay-100">
+                    <div class="w-14 h-14 bg-brand-50 dark:bg-brand-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-brands fa-docker text-2xl text-brand-600 dark:text-brand-400"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-4">Containers</h3>
+                    <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+                        <li><i class="fa-brands fa-docker text-brand-500 mr-2"></i>Docker</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-500 mr-2"></i>Podman</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-500 mr-2"></i>Docker Compose</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-500 mr-2"></i>Container Registries</li>
+                    </ul>
+                </div>
+
+                <!-- Monitoring & Tools -->
+                <div class="bg-white dark:bg-slate-900 rounded-xl p-8 shadow-lg border border-slate-100 dark:border-slate-800 hover:border-brand-500 dark:hover:border-brand-500 transition-all group reveal scale-card delay-200">
+                    <div class="w-14 h-14 bg-brand-50 dark:bg-brand-900/30 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-chart-line text-2xl text-brand-600 dark:text-brand-400"></i>
+                    </div>
+                    <h3 class="text-xl font-heading font-bold mb-4">Monitoring & Tools</h3>
+                    <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+                        <li><i class="fa-solid fa-caret-right text-brand-500 mr-2"></i>Prometheus & Grafana</li>
+                        <li><i class="fa-solid fa-caret-right text-brand-500 mr-2"></i>Node Exporter</li>
+                        <li><i class="fa-brands fa-git-alt text-brand-500 mr-2"></i>Git / GitHub / GitLab</li>
+                        <li><i class="fa-solid fa-terminal text-brand-500 mr-2"></i>Advanced Linux CLI</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-white dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">Featured Architectures</h2>
+                <div class="w-20 h-1.5 bg-brand-500 mx-auto rounded-full"></div>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Real-world implementations demonstrating resilience, security, and automation.</p>
+            </div>
+
+            <div class="space-y-16">
+                <!-- Project 1 -->
+                <div class="flex flex-col lg:flex-row gap-10 items-center reveal bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-6 md:p-10 border border-slate-100 dark:border-slate-800">
+                    <div class="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-xl aspect-video bg-slate-200 dark:bg-slate-800 relative group flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-brand-600/20 to-indigo-500/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500"></div>
+                        <i class="fa-solid fa-network-wired text-8xl text-slate-400 dark:text-slate-600 group-hover:scale-110 transition-transform duration-500"></i>
+                    </div>
+                    <div class="w-full lg:w-1/2 space-y-6">
+                        <div class="inline-block px-3 py-1 rounded-full bg-brand-100 dark:bg-brand-900/50 text-brand-600 dark:text-brand-400 text-sm font-semibold tracking-wide">
+                            Infrastructure Architecture
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-heading font-bold">High Availability Production Infrastructure</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                            Designed and deployed a fault-tolerant, scalable production environment capable of handling high traffic with zero downtime deployments. Focused on separating concerns across web, app, and data tiers.
+                        </p>
+                        
+                        <div class="bg-white dark:bg-slate-900 p-5 rounded-lg border border-slate-200 dark:border-slate-700">
+                            <h4 class="font-bold text-slate-800 dark:text-slate-200 mb-3"><i class="fa-solid fa-sitemap mr-2 text-brand-500"></i> Architecture Highlights</h4>
+                            <ul class="space-y-2 text-slate-600 dark:text-slate-400 text-sm">
+                                <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Two application servers in an active-active cluster</li>
+                                <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Dedicated hardened database server (MySQL/PostgreSQL)</li>
+                                <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Nginx reverse proxy load balancer</li>
+                                <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Cloudflare DNS integration for caching & DDoS protection</li>
+                                <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Rsync automation via cron for state sync</li>
+                                <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Prometheus + Grafana full-stack monitoring</li>
+                                <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Telegram bot integration for real-time resource alerts</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-sm font-medium">Nginx</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-sm font-medium">Linux</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-sm font-medium">Prometheus</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-sm font-medium">Grafana</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-sm font-medium">Bash Scripting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="flex flex-col lg:flex-row-reverse gap-10 items-center reveal bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-6 md:p-10 border border-slate-100 dark:border-slate-800">
+                    <div class="w-full lg:w-1/2 rounded-xl overflow-hidden shadow-xl aspect-video bg-slate-200 dark:bg-slate-800 relative group flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-500"></div>
+                        <i class="fa-solid fa-robot text-8xl text-slate-400 dark:text-slate-600 group-hover:scale-110 transition-transform duration-500"></i>
+                    </div>
+                    <div class="w-full lg:w-1/2 space-y-6">
+                        <div class="inline-block px-3 py-1 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 text-sm font-semibold tracking-wide">
+                            Automation
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-heading font-bold">Centralized Infrastructure Automation</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                            Implemented an Infrastructure as Code (IaC) approach to eliminate configuration drift and vastly reduce deployment times across a fleet of Linux servers.
+                        </p>
+                        
+                        <div class="bg-white dark:bg-slate-900 p-5 rounded-lg border border-slate-200 dark:border-slate-700">
+                            <h4 class="font-bold text-slate-800 dark:text-slate-200 mb-3"><i class="fa-solid fa-gears mr-2 text-indigo-500"></i> Architecture Highlights</h4>
+                            <ul class="space-y-2 text-slate-600 dark:text-slate-400 text-sm">
+                                <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Dedicated Ansible control node for secure credential management</li>
+                                <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Playbooks written for zero-touch package installation & patching</li>
+                                <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Baseline security configuration standardization (SSH keys, Firewall rules)</li>
+                                <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Automated user provisioning and access control (IAM equivalent)</li>
+                                <li><i class="fa-solid fa-check text-emerald-500 mr-2"></i> Dramatic reduction in MTTR (Mean Time To Recovery) through disaster recovery playbooks</li>
+                            </ul>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-sm font-medium">Ansible</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-sm font-medium">YAML</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-sm font-medium">SSH</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-sm font-medium">Python</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded text-sm font-medium">RHEL/CentOS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-24 bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute right-0 top-0 w-64 h-64 bg-brand-500/5 rounded-full filter blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">Certifications</h2>
+                <div class="w-20 h-1.5 bg-brand-500 mx-auto rounded-full"></div>
+                <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">Industry-recognized credentials validating expertise in top technologies.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                
+                <!-- AWS -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 flex flex-col items-center justify-center text-center shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 reveal">
+                    <div class="w-24 h-24 mb-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center border-4 border-[#FF9900]/20">
+                        <i class="fa-brands fa-aws text-5xl text-[#FF9900]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading mb-2">AWS Certified</h3>
+                    <div class="bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded text-sm font-semibold text-slate-600 dark:text-slate-300 mb-4">1x Certified</div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm">AWS Certified Solutions Architect – Associate</p>
+                </div>
+
+                <!-- Red Hat -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 flex flex-col items-center justify-center text-center shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 reveal delay-100">
+                    <div class="w-24 h-24 mb-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center border-4 border-[#CC0000]/20">
+                        <i class="fa-brands fa-redhat text-5xl text-[#CC0000]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading mb-2">Red Hat Certified</h3>
+                    <div class="bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded text-sm font-semibold text-slate-600 dark:text-slate-300 mb-4">2x Certified</div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm">Red Hat Certified System Administrator</p>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm">Red Hat Certified Engineer</p>              
+                </div> 
+
+                <!-- Cisco -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 flex flex-col items-center justify-center text-center shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all duration-300 reveal delay-200">
+                    <div class="w-24 h-24 mb-6 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center border-4 border-[#1BA0D7]/20">
+                        <i class="fa-solid fa-network-wired text-4xl text-[#1BA0D7]"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading mb-2">Cisco Certified</h3>
+                    <div class="bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded text-sm font-semibold text-slate-600 dark:text-slate-300 mb-4">3x Certified</div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm">Network Technician Career Path (NTCP)</p>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm">Networking Devices and Initial Configuration</p>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm">Networking Basics</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+   <!--contact section -->
+   <section id="contact" class="py-24 bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
+    <div class="absolute right-0 top-0 w-64 h-64 bg-brand-500/5 rounded-full blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Title -->
+        <div class="text-center mb-16 reveal">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">
+                Contact <span class="text-brand-500">Me</span>
+            </h2>
+            <div class="w-20 h-1.5 bg-brand-500 mx-auto rounded-full"></div>
+            <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                Below are the details to reach out to me!
+            </p>
+        </div>
+        <!-- Cards -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+    <!-- LinkedIn -->
+    <div class="contact-card group transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-500 border border-slate-200 dark:border-slate-800 rounded-xl p-8 bg-white dark:bg-slate-900 text-center">
+        <a href="https://www.linkedin.com/in/ajay-kumar-m-732196318" 
+           target="_blank"
+           class="contact-link block">
+            <i class="fab fa-linkedin text-4xl text-[#0077b5] mb-4 transition-transform duration-300 group-hover:scale-110"></i>
+            <h3 class="contact-label font-semibold">LinkedIn</h3>
+        </a>
+    </div>
+    <!-- GitHub -->
+    <div class="contact-card group transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-500 border border-slate-200 dark:border-slate-800 rounded-xl p-8 bg-white dark:bg-slate-900 text-center">
+        <a href="https://github.com/Ajaykumar2605" 
+           target="_blank"
+           class="contact-link block">
+            <i class="fab fa-github text-4xl text-black dark:text-white mb-4 transition-transform duration-300 group-hover:scale-110"></i>
+            <h3 class="contact-label font-semibold">GitHub</h3>
+        </a>
+    </div>
+    <!-- Mail -->
+    <div class="contact-card group transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-500 border border-slate-200 dark:border-slate-800 rounded-xl p-8 bg-white dark:bg-slate-900 text-center">
+        <a href="mailto:mgajaykumar2004@gmail.com" 
+           class="contact-link block">
+            <i class="fas fa-envelope text-4xl text-blue-500 mb-4 transition-transform duration-300 group-hover:scale-110"></i>
+            <h3 class="contact-label font-semibold">Mail</h3>
+        </a>
+    </div>
+    <!-- Credly -->
+    <div class="contact-card group transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-brand-500 border border-slate-200 dark:border-slate-800 rounded-xl p-8 bg-white dark:bg-slate-900 text-center">
+        <a href="https://www.credly.com/users/ajaykumar26" 
+           target="_blank"
+           class="contact-link block">
+            <i class="fa-solid fa-award text-4xl text-orange-500 mb-4 transition-transform duration-300 group-hover:scale-110"></i>
+            <h3 class="contact-label font-semibold">Credly</h3>
+        </a>
+    </div>
+
+</div>
+</div>       
+</section>
+   <!-- contact section ends -->
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 dark:bg-slate-950 border-t border-slate-800 py-12 text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="font-heading font-bold text-xl tracking-tight text-white mb-2 md:mb-0">
+                    <span class="text-brand-500">AK</span>Portfolio
+                </div>
+                <p class="text-sm">
+                    <span>Designed by </span><span style="background: linear-gradient(90deg, #027ea3 0%, #a17a05 50%, #8c04a3 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; font-weight: bold;">Mr. AK</span> &copy; <span id="year"></span> M AJAY KUMAR. All rights reserved.
+                </p>
+                <div class="flex gap-4">
+                    <span>Powered by <i class="fab fa-github" style="color:#e7dbdb; vertical-align:middle;"></i> GitHub
+                    <!-- <a href="#" class="hover:text-white transition-colors" aria-label="LinkedIn"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                    <a href="#" class="hover:text-white transition-colors" aria-label="GitHub"><i class="fa-brands fa-github text-xl"></i></a>
+                    <a href="#" class="hover:text-white transition-colors" aria-label="Email"><i class="fa-solid fa-envelope text-xl"></i></a>
+                    <a href="#" target="_blank" class="hover:text-white transition-colors" aria-label="Telegram"><i class="fa-brands fa-telegram text-xl"></i></a>
+                    <a href="#" target="_blank" class="hover:text-white transition-colors" aria-label="Credly"><i class="fa-solid fa-award text-xl"></i></a> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+     <!--script-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- vanilla tilt.js links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- scroll reveal anim -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<!-- typed.js cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mailjs/browser/dist/mailjs.min.js"></script>
+</body>
+</html>
